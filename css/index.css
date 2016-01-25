@@ -1,15 +1,117 @@
 body {
     font-family: sans-serif;
-    background-image: url(../img/background.jpg);
+    background:
+        /* We can tint backgrounds with a transparent gradient
+        https://css-tricks.com/tinted-images-multiple-backgrounds/ */
+        linear-gradient(
+            rgba(3, 16, 29, 0.2), 
+            rgba(3, 16, 29, 0.2)
+        ),
+        url(../img/background.jpg);
+
+    background-size: cover;
 }
 
+/* Header for our app. Hamburger, Name, Search */
+
+header {
+    margin-top:7%;
+    width:100%;
+}
+
+header .flankButton {
+    color: #FFF;
+    font-family: 'Verdana', 'Arial', sans-serif;
+    font-size:20px;
+}
+
+header .middle {
+    width:70%;
+    float:left;
+    text-align:center;
+}
+
+header .left {
+    width: 15%;
+    float:left;
+    font-weight: normal;
+    font-size:25px;
+    text-align:center;
+}
+
+header .right {
+    width: 15%
+    float:right;
+    font-size:25px;
+    text-align:center;
+}
+header .right:after {
+    float:none;
+}
+
+/* Everything we need for the main body of the app */
+
+main {
+    margin-top:25%;
+    text-align:center;
+    color: #FFF;
+}
+
+main .icon-major {
+    
+
+}
+
+main .sunny {
+    background-image: url('../img/Icons/sunny39.svg');
+}
+
+main .winter {
+    background-image: url('../img/Icons/winter74.svg');
+}
+
+main .current-temperature {
+    background-repeat: no-repeat;
+    background-size:125px 125px;
+    background-position:top;
+    
+    padding-top:25%;
+    font-weight:normal;
+    font-size:106pt;
+    margin-bottom:10%;
+}
+
+main .detail-right {
+    width:45%;
+    height:10%;
+    float:right;
+    font-size:20pt;
+    text-align:left;
+}
+
+main .detail-left img {
+    width:10%;
+}
+
+main .detail-right img {
+    width:20%;
+}
+
+main .detail-left {
+    width:45%;
+    float:left;
+    text-align:right;
+    font-size:20pt;
+}
+
+/* Everything we need for the forecast */
 footer {
     position: fixed;
     bottom:0;
     left:0;
     right:0;
-    height:20%;
-    background-color: rgba(0, 0, 0, 0.35);
+    height:19%;
+    background-color: rgba(0, 0, 0, 0.5);
     font-size:0;
 }
 
@@ -20,27 +122,32 @@ footer .day {
     height:100%;
     font-size:16px;
     color: #FFF;
-    margin-top:10px;left: 
+    margin-top:10px;
     font-size: 18px;
     box-sizing:border-box;
     text-transform:uppercase;
     font-weight: bold;
-    background-image: url('../img/Icons/rainy22.svg');
 }
 
-footer .day .weather {
-    font-size:14px;
-    font-weight:bold;
-    width:100%;
+footer .day .name {
+    height:14%;
+    font-family: 'Verdana', sans-serif;
+    font-weight:100;
+    margin-top:2%;
+    margin-bottom: 2%;
 }
 
 footer .day .icon {
-    width:100%;
-    height:70%;
+    width:40%;
+    height:23%;
+    margin-top:30%;
+    margin-bottom:30%;
+    margin-left:auto;
+    margin-right:auto;
 }
 
-main {
-    background-color: #ededed;
-    padding:10px;
-    margin:5px;
+footer .day .weather {
+    font-size:13pt;
+    font-weight:bold;
+    width:100%;
 }

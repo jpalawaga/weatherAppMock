@@ -1,0 +1,31 @@
+/**
+ * I have slimmed down bootstrap the minimal components so that
+ * I have just what I need to get glyphs working for hamburger and
+ * search.
+ *
+ * https://getbootstrap.com
+ * https://glyphicons.com
+ **/
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src:  url('../fonts/glyphicons-halflings-regular.woff2') format('woff2');
+}
+
+.glyphicon {
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.glyphicon-menu-hamburger:before {
+  content: "\e236";
+}
+.glyphicon-search:before {
+  content: "\e003";
+}
